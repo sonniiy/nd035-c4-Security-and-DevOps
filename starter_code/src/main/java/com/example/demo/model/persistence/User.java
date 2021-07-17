@@ -20,6 +20,16 @@ public class User {
 	@JsonProperty
 	private String username;
 
+	public User(long id, String username, String password) {
+		this.id = id;
+		this.username = username;
+		this.password = password;
+	}
+
+	public User() {
+
+	}
+
 	@JsonProperty(access = Access.WRITE_ONLY)
 	@Column(nullable = false)
 	private String password;
